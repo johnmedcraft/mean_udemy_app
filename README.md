@@ -1,1 +1,0 @@
-# mean_udemy_app
