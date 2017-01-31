@@ -1,0 +1,26 @@
+{
+  "name": "mean_udemy_app",
+  "version": "1.0.0",
+  "description": "MEAN app built for the udemy class",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/johnmedcraft/mean_udemy_app.git"
+  },
+  "author": "jmedcraft",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/johnmedcraft/mean_udemy_app/issues"
+  },
+  "homepage": "https://github.com/johnmedcraft/mean_udemy_app#readme",
+  "dependencies": {
+    "express": "^4.14.1"
+  },
+  "devDependencies": {
+    "mocha": "^3.2.0"
+  }
+}
