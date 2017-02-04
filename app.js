@@ -1,4 +1,5 @@
 //REQUIRES
+require('./api/data/dbconnection.js').open();
 var express = require('express');
 var path = require('path');
 var routes = require('./api/routes');
@@ -19,7 +20,7 @@ app.use(function(req, res, next) {
 //DEFINE STATIC FOLDER
 app.use(express.static(path.join(__dirname, 'public')));
 
-//DEFINE MIDDLEWARE (ORDER MATTERS THAT'S WHY THIS ONE IS DOWN HERE INSTEAD OF UP THERE)
+//DEFINE MIDDLEWARE (ORDER MATTERS - THAT'S WHY THIS ONE IS DOWN HERE INSTEAD OF UP THERE)
 app.use(bodyParser.urlencoded({extended: false}));
 
 //DEFINE ROUTES FOLDER
