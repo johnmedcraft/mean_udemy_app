@@ -4,8 +4,9 @@ var express = require('express');
 var router = express.Router();
 //REQUIRE CONTROLLERS
 var ctrlHotels = require('../controllers/hotels.controllers.js');
+var ctrlReviews = require('../controllers/reviews.controllers.js');
 
-//DEFINE ROUTES
+//DEFINE HOTEL ROUTES
 router
   .route('/hotels')
   .get(ctrlHotels.hotelsGetAll);
@@ -17,6 +18,15 @@ router
 router
   .route('/hotels/new')
   .post(ctrlHotels.hotelsAddOne);
+
+//DEFINE REVIEWS ROUTES
+router
+  .route('/hotels/:hotelId/reviews')
+  .get(ctrlReviews.reviewsGetAll);
+
+router
+  .route('/hotels/:hotelId/reviews/:reviewId')
+  .get(ctrlReviews.reviewsGetOne);
 
 //EXPORT ROUTER
 module.exports = router;
